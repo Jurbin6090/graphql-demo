@@ -1,0 +1,17 @@
+type Person {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    age: Int!
+    weight: Float!
+}
+
+type Query {
+    allPeople: [Person]!
+    aPerson(id: Int): Person
+}
+
+type Mutation {
+    createOrUpdatePerson(person: Person)
+    deleteAPerson(person: Person)
+}
